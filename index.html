@@ -133,7 +133,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/05/21/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
+      <a class="article-title" href="/2021/05/21/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">JavaScript 数组方法</a>
     </h1>
   
 
@@ -146,11 +146,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##第一章</p>
-<p>内容</p>
-<p>##第二章</p>
-<p>第二章内容****8889999<br>##第三章</p>
-<p>第三章内容****8889999</p>
+        <h2 id="1-查找数组元素位置"><a href="#1-查找数组元素位置" class="headerlink" title="1. 查找数组元素位置"></a>1. 查找数组元素位置</h2><blockquote>
+<ul>
+<li><strong>题目描述</strong><br>找出元素 item 在给定数组 arr 中的位置</li>
+<li><strong>输出描述</strong><br>如果数组中存在 item，则返回元素在数组中的位置，否则返回 -1</li>
+</ul>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span> ], item = <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">indexOf</span>(<span class="params">arr, item</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> arr.findIndex(<span class="function">(<span class="params">cur,index</span>)=&gt;</span>&#123;</span><br><span class="line">      <span class="keyword">return</span> cur === item</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">indexOf(arr, item)</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-数组求和"><a href="#2-数组求和" class="headerlink" title="2. 数组求和"></a>2. 数组求和</h2><blockquote>
+<ul>
+<li><strong>题目描述</strong><br>计算给定数组 arr 中所有元素的总和</li>
+<li><strong>输出描述</strong><br>数组中的元素均为 Number 类型</li>
+</ul>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span> ];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> arr.reduce(<span class="function">(<span class="params">total,cur</span>)=&gt;</span>&#123;</span><br><span class="line">      <span class="keyword">return</span> total + cur</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sum(arr)</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-移除数组中的元素"><a href="#3-移除数组中的元素" class="headerlink" title="3. 移除数组中的元素"></a>3. 移除数组中的元素</h2><blockquote>
+<ul>
+<li><strong>题目描述</strong><br>移除数组 arr 中的所有值与 item 相等的元素。不要直接修改数组 arr，结果返回新的数组</li>
+</ul>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">2</span> ], item = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">remove</span>(<span class="params">arr, item</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> arr.filter(<span class="function"><span class="params">cur</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> cur !== item</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">remove(arr, item)</span><br></pre></td></tr></table></figure>
 
       
 
@@ -159,6 +176,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -200,7 +228,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/05/21/hello-world/">Hello World</a>
+      <a class="article-title" href="/2021/05/21/hello-world/">Hello Hexo</a>
     </h1>
   
 
@@ -234,6 +262,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -343,6 +382,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
